@@ -1,0 +1,220 @@
+// Money Handler class
+
+#include<iostream>
+
+#include "money_handler.h"
+
+#include "console.h"
+#include "dispenser.h"
+
+using namespace std;
+
+
+money_handler::money_handler(console &console_handle, dispenser &dispenser_handle) 
+    :	console_ref(console_handle),
+	dispenser_ref(dispenser_handle)
+	double calcChange();
+	double getPrice();
+	double setCashIn();
+	double updateTotal();
+
+	private:
+	double total;
+	double cashIn;
+	double change;
+
+};
+
+#endif 
+//........................................................
+
+#ifndef Candy_H
+#define Candy_H
+//Greg Katz
+//cs 203
+//Barry Jones
+//Assignment 3 
+using namespace std;
+class candy
+{
+	public:
+	Candy(Inventory &inventory);
+	string getName();
+	double getPrice();
+	bool getAvailable();
+	void setName(string setName);
+	void setPrice(int setPrice);
+	void setAvailable(int setAvailable);
+
+
+	private:
+	Inventory& Inventory_ref
+	string name;
+	double price;
+	int available;
+};
+
+#endif
+
+//........................................................
+
+// Inventory header file
+#ifndef INVENTORY_H
+#define	INVENTORY_H
+
+class console;		// Forward Declarations
+class dispenser;
+
+class inventory {
+	
+    public:
+	inventory(console &console_handle, dispenser &dispenser_handle);
+	
+	bool getAvailable();
+	void removeCandyType();
+	void addCandyType();
+	void setAvailable();
+     private:
+	candy c;
+	console_ref(console_handle);
+	dispenser_ref(dispenser_handle);
+	vector<candy> CandyVector;
+
+
+};
+
+#endif
+
+//....................................................
+
+// Header file for dispenser class
+#ifndef DISPENSER_H
+#define	DISPENSER_H
+
+class inventory;	// Forward Declarations
+class money_handler;
+
+
+class dispenser {
+    public:
+	dispenser(inventory &inventory_handle, money_handler &mh_handle);
+	
+
+	private:
+	void checkInventory();
+	void checkMoney();
+	void dispense();
+	void request();
+
+};
+
+#endif
+
+
+//..............................................
+
+// Header file for console class
+#ifndef CONSOLE_H
+#define	CONSOLE_H
+
+
+#include<string>
+
+using namespace std;
+
+class admin_tools;	// Forward Declarations
+class dispenser;
+class inventory;
+class money_handler;
+
+class console {
+
+    public:
+	console(admin_tools &at_handle, dispenser &dispenser_handle, 
+		inventory &inventory_handle, money_handler &mh_handle);
+	void MoneyDisplay();
+	void candyDisplay();
+	void buttons();
+
+	
+
+
+	private:
+	string choice
+	void moneyInfo();
+	void sendCandyCode();
+	void updateDisplay();
+
+};
+
+#endif 
+
+//....................................................
+	
+//Candy Machine Header File
+#ifndef CANDY_MACHINE_H
+#define	CANDY_MACHINE_H
+
+
+
+#include<string>
+
+#include "admin_tools.h"
+#include "console.h"
+#include "dispenser.h"
+#include "inventory.h"
+#include "money_handler.h"
+
+using namespace std;
+
+class candy_machine {
+
+    public:
+	candy_machine();
+	//string ask_tools();
+	//string ask_console();
+	
+    private:
+	/*admin_tools my_tools;
+	console	my_console;
+	dispenser my_dispenser;
+	inventory my_inventory;
+	money_handler my_handler;
+*/
+
+
+};
+
+
+#endif //CANDY_MACHINE_H
+
+//....................................................
+
+// Header file for admin tools
+#ifndef ADMIN_TOOLS_H
+#define	ADMIN_TOOLS_H
+
+
+#include<string>
+
+class inventory; //Forward declaration
+class money_handler;
+
+using namespace std;
+
+class admin_tools {
+
+    public:
+	admin_tools(inventory &inventory_handle, money_handler &mh_handle);
+	
+
+	private:
+	void takeMoneyOut();
+	void putMoneyIn();
+	void checkInventory();
+	void addToInventory();
+	void addCandyType();
+	void changePrice();
+};
+
+#endif

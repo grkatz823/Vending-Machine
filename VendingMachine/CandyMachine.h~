@@ -1,0 +1,26 @@
+#ifndef CandyMachine_H
+#define CandyMachine_H
+//Greg Katz
+//cs 203
+//Barry Jones
+//Assignment
+#include <string> 
+using namespace std;
+class CandyMachine
+{
+	public:
+	CandyMachine();
+	string getString();
+
+	private:
+	string testStr;
+	/*Inventory inv;
+	MoneyHandler mh;
+	Dispenser d;
+	Console c;*/
+	
+};
+
+#endif
+
+

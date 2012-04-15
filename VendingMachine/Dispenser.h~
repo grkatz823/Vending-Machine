@@ -1,0 +1,28 @@
+#ifndef DISPENSER_H
+#define	DISPENSER_H
+
+using namespace std;
+//Greg Katz
+//cs 203
+//Barry Jones
+//Assignment 3
+// Header file for dispenser class
+
+class inventory;	// Forward Declarations
+class money_handler;
+
+
+class dispenser {
+    public:
+	dispenser(inventory &inventory_handle, money_handler &mh_handle);
+}
+
+	private:
+	void checkInventory();
+	void checkMoney();
+	void dispense();
+	void request();
+
+};
+
+#endif

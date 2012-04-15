@@ -1,0 +1,40 @@
+#ifndef CONSOLE_H
+#define	CONSOLE_H
+using namespace std;
+//Greg Katz
+//cs 203
+//Barry Jones
+//Assignment 3
+// Header file for console class
+
+
+
+#include<string>
+
+using namespace std;
+
+class admin_tools;	// Forward Declarations
+class dispenser;
+class inventory;
+class money_handler;
+
+class console {
+
+    public:
+	console(admin_tools &at_handle, dispenser &dispenser_handle, 
+		inventory &inventory_handle, money_handler &mh_handle);
+	void MoneyDisplay();
+	void candyDisplay();
+	void buttons();
+}
+	
+
+
+	private:
+	void moneyInfo();
+	void sendCandyCode();
+	void updateDisplay();
+
+};
+
+#endif 

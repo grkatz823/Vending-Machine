@@ -1,0 +1,26 @@
+//Greg Katz
+//cs 203
+//Barry Jones
+//Assignment 3
+using namespace std;
+#include<iostream>
+#include "AdminTools.h"
+
+AdminTools::AdminTools(){
+}
+
+void AdminTools::takeMoneyOut(){
+
+}
+
+void AdminTools::putMoneyIn(){}
+
+void AdminTools::checkInventory(){}
+
+void AdminTools::addToInventory(){}
+
+void AdminTools::addCandyType(){}
+
+void AdminTools::removeCandyType(){}
+
+void AdminTools::changePrice(){}

@@ -1,0 +1,29 @@
+#ifndef Candy_Machine_H
+#define Candy_Machine_H
+using namespace std;
+//Greg Katz
+//cs 203
+//Barry Jones
+//Assignment 3
+// Inventory header file
+#ifndef INVENTORY_H
+#define	INVENTORY_H
+
+class console;		// Forward Declarations
+class dispenser;
+
+class inventory {
+	
+    public:
+	inventory(console &console_handle, dispenser &dispenser_handle);
+	bool getAvailable();
+
+	private:
+	candy c;
+	void addCandyType();
+	void sendAllInfo();
+	void setAvailable();
+
+};
+
+#endif

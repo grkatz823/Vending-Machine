@@ -1,0 +1,30 @@
+//....................................................
+
+// Header file for admin tools
+#ifndef ADMIN_TOOLS_H
+#define	ADMIN_TOOLS_H
+
+
+#include<string>
+
+class console; //Forward declaration
+
+using namespace std;
+
+class admin_tools {
+
+    public:
+	admin_tools(console &console_handle);
+	void showOptions();	
+	void takeMoneyOut();
+	void putMoneyIn();
+	void checkInventory();
+	void addToInventory();
+	void addCandyType();
+	void changePrice();
+	private:
+	console& console_ref;
+	int pick;
+};
+
+#endif

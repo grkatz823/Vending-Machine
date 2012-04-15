@@ -1,0 +1,24 @@
+#ifndef Candy_Machine_H
+#define Candy_Machine_H
+using namespace std;
+//Greg Katz
+//cs 203
+//Barry Jones
+//Assignment 3
+class MoneyHandler
+{
+	public:
+	MoneyHandler();
+	void calcChange();
+	int getPrice();
+	int setCashIn();
+	int updateTotal();
+
+	private:
+	int total;
+	int cashIn;
+	int change;
+
+};
+
+#endif 

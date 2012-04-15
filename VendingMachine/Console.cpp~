@@ -1,0 +1,37 @@
+//Greg Katz
+//cs 203
+//Barry Jones
+//Assignment 3
+// Console class
+
+#include<iostream>
+	
+#include "console.h"
+
+#include "admin_tools.h"
+#include "dispenser.h"
+#include "inventory.h"
+#include "money_handler.h"
+
+using namespace std;
+
+console::console(admin_tools &at_handle, dispenser &dispenser_handle, 
+		 inventory &inventory_handle, money_handler &mh_handle) 
+    :	at_ref(at_handle),
+	dispenser_ref(dispenser_handle),
+	inventory_ref(inventory_handle),
+	mh_ref(mh_handle)
+
+void Console::MoneyDisplay(){}
+
+void Console::candyDisplay(){}
+
+Console::buttons(){}
+
+Console::moneyInfo(){}
+
+Console::sendCandyCode(){}
+
+Console::updateDisplay(){}
+
+

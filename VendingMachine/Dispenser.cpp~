@@ -1,0 +1,28 @@
+//Greg Katz
+//cs 203
+//Barry Jones
+//Assignment 3
+// Dispenser Class
+
+#include<iostream>
+
+#include "dispenser.h"
+
+#include "inventory.h"
+#include "money_handler.h"
+
+
+using namespace std;
+
+dispenser::dispenser(inventory &inventory_handle, money_handler &mh_handle) 
+    :   inventory_ref(inventory_handle),
+	mh_ref(mh_handle)	
+
+
+void Dispenser::checkInventory(){}
+
+void Dispenser::checkMoney(){}
+
+void Dispenser::dispense(){}  
+
+void Dispenser::request(){}

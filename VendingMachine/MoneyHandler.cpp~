@@ -1,0 +1,26 @@
+//Greg Katz
+//cs 203
+//Barry Jones
+//Assignment 3
+using namespace std;
+#include<iostream>
+#include "MoneyHandler.h"
+
+MoneyHandler::MoneyHandler(){
+total = totalMon;
+cashIn = cashInput;
+}
+
+void MoneyHandler::calcChange(){
+change = cashIn - total;
+}
+
+int MoneyHandler::getPrice(){
+}
+
+int MoneyHandler::setCashIn(){
+}
+
+int MoneyHandler::updateTotal(){
+
+}

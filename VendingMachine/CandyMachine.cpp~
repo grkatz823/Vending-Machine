@@ -1,0 +1,26 @@
+//candy machine sim
+//Greg Katz
+//cs 203
+//Barry Jones
+//Assignment 3
+//Candy Machine Class
+
+	//code
+#include<iostream>
+
+#include "candy_machine.h"
+
+using namespace std;
+
+candy_machine::candy_machine() 
+    :	my_tools(my_inventory, my_handler),
+	my_console(my_tools, my_dispenser, my_inventory,my_handler),
+	my_dispenser(my_inventory, my_handler),
+	my_inventory(my_console, my_dispenser),
+	my_handler(my_console, my_dispenser)
+}
+
+string CandyMachine::getString(){
+	return testStr;
+}
+

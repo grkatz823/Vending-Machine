@@ -1,0 +1,26 @@
+//Greg Katz
+//cs 203
+//Barry Jones
+//Assignment 3
+// Inventory Class
+
+#include<iostream>
+
+#include "inventory.h"
+
+#include "console.h"
+#include "dispenser.h"
+
+using namespace std;
+
+inventory::inventory(console &console_handle, dispenser &dispenser_handle) 
+    :	console_ref(console_handle),
+	dispenser_ref(dispenser_handle)
+
+bool Inventory::getAvailable(){}
+
+void Inventory::addCandyType(){}
+
+void Inventory::sendAllInfo(){}
+
+void Inventory::setAvailable(){}
